@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Shopee</title>
+    
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+    .practice {
+        background-color: black;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+        .first {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            width: 700px;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sec {
+            background-color: white;
+            color: red;
+            font-weight: bold;
+            width: 700px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+        }
+        .sec > button {
+            margin-bottom: 10px ;
+            border-radius: 5px;
+            width: 80px;
+            height: 40px;
+            background-color: maroon;
+            color: white;
+            font-family: "Poppins";
+            border: 2px red;
+        }
+    </style>
+    <script>
+        function hai(){
+            alert("This is my Wonderful Indonesia!")
+        }
+        function hii(){
+            alert("Beside i love indonesia, i love my mom too")
+        }
+        function hui(){
+            alert("And beside i love my mom, i love my friend")
+        }
+    </script>
+    <body>
+    <h1>Cloning Shopee</h1>
+    <h2>Sub shopee</h2>
+
+    <div class="practice">
+        <div class="first">
+            <h1>indonesia</h1>
+        </div>
+        <div class="sec" id="sec">
+            <button onclick="hai()">Message 1</button>
+            <button onclick="hii()">Message 2</button>
+            <button onclick="hui()">Message 3</button>  
+        </div>
+    </div>
+</body>
+
+</html>
