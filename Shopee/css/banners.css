@@ -1,0 +1,39 @@
+.banners {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+.left-banners {
+  margin-right: 5px;
+}
+.left-banners > img {
+  border-radius: 2px;
+}
+.right-banners > img {
+  width: 400px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+.bottom-banners {
+  width: 1200px;
+  justify-content: space-between;
+  margin: 20px;
+  align-items: flex-start;
+}
+.bottom-banners > li {
+  width: 100%;
+  text-align: center;
+}
+.bottom-banners > li :hover {
+  
+  margin-bottom: 1x;
+}
+.bottom-banners > li > img {
+  width: 45px;
+  margin-bottom: 5px;
+}
+.bottom-banners > li > span {
+  font-size: 12px;
+  width: 90px;
+  overflow: visible;
+}

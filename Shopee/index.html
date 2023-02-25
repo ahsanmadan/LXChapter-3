@@ -21,153 +21,56 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/gnb.css" />
+    <link rel="stylesheet" href="css/banners.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <style>
-    .gnb {
-      background: linear-gradient(-180deg, #ee4d2d, #ff7337);
-      padding-bottom: 12px;
-      color: white;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-size: 13px;
-      text-decoration: none;
-      list-style: none;
-    }
-
-    .left {
-      display: flex;
-      flex-direction: row;
-      margin: 5px;
-      align-items: center;
-      margin-right: auto;
-    }
-
-    .left > li,
-    .left > i {
-      margin: 3px;
-    }
-
-    .top {
-      margin: auto;
-      width: 1200px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .right {
-      display: flex;
-      flex-direction: row;
-      margin: 5px;
-      align-items: center;
-      margin-left: auto;
-    }
-
-    .right > li,
-    .right > i {
-      margin: 3px;
-    }
-
-    .bottom {
-      margin: auto;
-      margin-top: 10px;
-      width: 1200px;
-    }
-
-    .flex-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .flex-row {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .search-input {
-      width: 850px;
-      height: 40px;
-      background-color: white;
-    }
-
-    .search-input > input {
-      width: 90%;
-      height: 35px;
-      margin-right: auto;
-      border: none;
-      border-radius: 2px;
-    }
-
-    .search-input > button {
-      background-color: #ff7337;
-      color: white;
-      width: 60px;
-      height: 35px;
-      margin: 3px;
-      border: none;
-      border-radius: 2px;
-    }
-
-    .tags {
-      margin-top: 5px;
-      width: 845px;
-    }
-
-    .tags > li {
-      margin-right: 9px;
-    }
-
-    .cart {
-      font-size: 25px;
-      margin-left: 50px;
-      margin-bottom: 5px;
-    }
-
-    .banners {
-      padding-top: 20px;
-      padding-bottom: 10px;
-    }
-    .left-banners {
+    .swiper {
+      width: 900px;
+      height: 245px;
       margin-right: 5px;
-    }
-    .left-banners > img {
-      width: 815px;
       border-radius: 2px;
     }
-    .right-banners > img {
-      width: 400px;
-      border-radius: 2px;
-      margin-bottom: 5px;
+
+    .swiper-button-prev {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 5px;
+      left: 0;
+      display: none;
     }
-    .bottom-banners {
-      width: 1200px;
-      justify-content: space-between;
-      margin: 20px;
-      align-items: flex-start;
+    .swiper-button-next {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 5px;
+      right: 0;
+      display: none;
     }
-    .bottom-banners>li{
-      width: 100%;
-      text-align: center;
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
     }
-    .bottom-banners>li>img{
-      width: 45px;
-      margin-bottom: 5px;
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover{
+      background-color: rgba(0, 0, 0, 0.5);
     }
-    .bottom-banners>li>span{
-      font-size: 12px;
-      width: 90px;
-      overflow: visible;
+
+    .swiper:hover > .swiper-button-next,
+    .swiper:hover > .swiper-button-prev {
+      display: flex;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: #f03510;
     }
   </style>
-
   <body>
     <div class="gnb">
       <!-- awal top -->
@@ -228,7 +131,27 @@
     <div class="banners flex-col">
       <div class="top-banners flex-row">
         <div class="left-banners">
-          <img src="static/banners/banner_1.png" alt="" />
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a href=""><img src="static/banners/banner_1.png" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href=""><img src="static/banners/banner_2.png" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href=""><img src="static/banners/banner_3.png" alt="" /></a>
+              </div>
+              <div class="swiper-slide">
+                <a href=""><img src="static/banners/banner_4.png" alt="" /></a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-slide" data-swiper-autoplay="3000"></div>
+          </div>
         </div>
 
         <div class="right-banners flex-col">
@@ -238,48 +161,66 @@
       </div>
 
       <div class="bottom-banners flex-row">
-          <li class="flex-col">
-            <img src="static/icons/1.png" alt="">
-            <span>Shopee Pilihan Lokal</span>
-          </li>
-          <li class="flex-col">
-            <img src="static/icons/2.png" alt="">
-            <span>Elektronik 100% ORI</span>
-          </li>
-          <li class="flex-col">
-            <img src="static/icons/3.png" alt="">
-            <span>Pulsa, Taghan, dan Tiket</span>
-          </li>
-          <li class="flex-col">
-            <img src="static/icons/4.png" alt="">
-            <span>inFasion</span>
-          </li>
-          <li class="flex-col">
-            <img src="static/icons/5.png" alt="">
-            <span>Shopee Supermarket</span>
-          </li>
-          <li class="flex-col">
-            <img src="static/icons/6.png" alt="">
-            <span>Bayar Di Tempat</span>
-          </li>
-          <li class="flex-col">
-            <img src="static/icons/7.png" alt="">
-            <span>Murah Lebay</span>
-          </li>
-          <li class="flex-col">
-            <img src="static/icons/8.png" alt="">
-            <span>Gratis Ongkir dan Voucher</span>
-          </li>
-          <li class="flex-col">
-            <img src="static/icons/9.png" alt="">
-            <span>Shopee Paylater</span>
-          </li>
-          <li class="flex-col">
-            <img src="static/icons/10.png" alt="">
-            <span>Semua Promo</span>
-          </li>
-          
+        <li class="flex-col">
+          <img src="static/icons/1.png" alt="" />
+          <span>Shopee Pilihan Lokal</span>
+        </li>
+        <li class="flex-col">
+          <img src="static/icons/2.png" alt="" />
+          <span>Elektronik 100% ORI</span>
+        </li>
+        <li class="flex-col">
+          <img src="static/icons/3.png" alt="" />
+          <span>Pulsa, Taghan, dan Tiket</span>
+        </li>
+        <li class="flex-col">
+          <img src="static/icons/4.png" alt="" />
+          <span>inFasion</span>
+        </li>
+        <li class="flex-col">
+          <img src="static/icons/5.png" alt="" />
+          <span>Shopee Supermarket</span>
+        </li>
+        <li class="flex-col">
+          <img src="static/icons/6.png" alt="" />
+          <span>Bayar Di Tempat</span>
+        </li>
+        <li class="flex-col">
+          <img src="static/icons/7.png" alt="" />
+          <span>Murah Lebay</span>
+        </li>
+        <li class="flex-col">
+          <img src="static/icons/8.png" alt="" />
+          <span>Gratis Ongkir dan Voucher</span>
+        </li>
+        <li class="flex-col">
+          <img src="static/icons/9.png" alt="" />
+          <span>Shopee Paylater</span>
+        </li>
+        <li class="flex-col">
+          <img src="static/icons/10.png" alt="" />
+          <span>Semua Promo</span>
+        </li>
       </div>
     </div>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 3000,
+        },
+      });
+    </script>
   </body>
 </html>
