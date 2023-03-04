@@ -19,14 +19,16 @@
   justify-content: space-between;
   margin: 20px;
   align-items: flex-start;
+  cursor: pointer;
 }
 .bottom-banners > li {
-  width: 100%;
+  width: 100px;
   text-align: center;
+  height: 80px;
 }
-.bottom-banners > li :hover {
-  
-  margin-bottom: 1x;
+.bottom-banners > li:hover > img {
+  width: 48px;
+  margin-bottom: 6px;
 }
 .bottom-banners > li > img {
   width: 45px;
@@ -36,4 +38,6 @@
   font-size: 12px;
   width: 90px;
   overflow: visible;
+  margin-bottom: auto;
 }
+
